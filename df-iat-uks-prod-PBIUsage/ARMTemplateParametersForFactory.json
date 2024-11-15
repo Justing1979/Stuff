@@ -1,0 +1,21 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "df-iat-uks-prod-PBIUsage"
+		},
+		"PowerBIUsageStore_accountKey": {
+			"value": ""
+		},
+		"LS_REST_Generic_properties_typeProperties_url": {
+			"value": "https://api.powerbi.com/v1.0/myorg/admin/"
+		},
+		"LS_REST_Generic_properties_typeProperties_aadResourceId": {
+			"value": "https://analysis.windows.net/powerbi/api"
+		},
+		"PowerBIUsageStore_properties_typeProperties_url": {
+			"value": "https://saiatuksprodcrmbi.dfs.core.windows.net/"
+		}
+	}
+}
