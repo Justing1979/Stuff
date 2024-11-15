@@ -1,0 +1,9 @@
+{
+	"name": "df-iat-uks-prod-PBIUsage",
+	"location": "uksouth",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "1bca4de7-9473-4ea1-9f79-cdbf1b6c451e",
+		"tenantId": "d76faab7-96b7-40c7-9b25-3d2fbd4ac1f1"
+	}
+}
