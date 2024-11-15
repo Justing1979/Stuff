@@ -5,8 +5,20 @@
 		"factoryName": {
 			"value": "df-iat-uks-prod-PBIUsage"
 		},
+		"AzureSqlDatabase1_password": {
+			"value": ""
+		},
 		"PowerBIUsageStore_accountKey": {
 			"value": ""
+		},
+		"AzureSqlDatabase1_properties_typeProperties_server": {
+			"value": "sql-iat-uks-prod-umbraco.database.windows.net"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_database": {
+			"value": "db-iat-uks-prod-crmbi"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_userName": {
+			"value": "WF81BE"
 		},
 		"LS_REST_Generic_properties_typeProperties_url": {
 			"value": "https://api.powerbi.com/v1.0/myorg/admin/"
