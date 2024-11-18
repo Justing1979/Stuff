@@ -1,5 +1,5 @@
 {
-	"name": "PL_PowerBIGetActivityEvents1",
+	"name": "PL_PowerBIGetActivityEventsToDatabase",
 	"properties": {
 		"description": "Extract Power BI Activity Events\n\nCreated by: Just Blindbæk",
 		"activities": [
