@@ -28,6 +28,9 @@
 		},
 		"PowerBIUsageStore_properties_typeProperties_url": {
 			"value": "https://saiatuksprodcrmbi.dfs.core.windows.net/"
+		},
+		"1amPBIUSAGEGrab_properties_PL_PowerBIGetActivityEventsToDatabase_parameters_DaysToExtract": {
+			"value": 1
 		}
 	}
 }
