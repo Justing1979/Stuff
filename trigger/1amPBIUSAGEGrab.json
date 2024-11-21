@@ -8,6 +8,9 @@
 				"pipelineReference": {
 					"referenceName": "PL_PowerBIGetActivityEventsToDatabase",
 					"type": "PipelineReference"
+				},
+				"parameters": {
+					"DaysToExtract": 1
 				}
 			}
 		],
