@@ -993,7 +993,7 @@
 				"parameters": {
 					"DaysToExtract": {
 						"type": "int",
-						"defaultValue": 1
+						"defaultValue": 30
 					}
 				},
 				"folder": {
