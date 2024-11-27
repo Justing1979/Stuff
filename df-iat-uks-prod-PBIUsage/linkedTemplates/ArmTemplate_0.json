@@ -49,6 +49,42 @@
 	},
 	"resources": [
 		{
+			"name": "[concat(parameters('factoryName'), '/SendEmail')]",
+			"type": "Microsoft.DataFactory/factories/pipelines",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"activities": [
+					{
+						"name": "SendEmail",
+						"type": "WebActivity",
+						"dependsOn": [],
+						"policy": {
+							"timeout": "0.12:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false,
+							"secureInput": false
+						},
+						"userProperties": [],
+						"typeProperties": {
+							"method": "POST",
+							"headers": {},
+							"url": "https://ed409f9f-bf2d-44c8-a264-dc0fb7ce71b1.webhook.uks.azure-automation.net/webhooks?token=fve5cRjeqQ6wIcoN6fTmWYxdes7KzOs7HtJ0dTBKQ3g%3d",
+							"body": {
+								"value": "{\"toEmail\":\"justingreenwood@wakefield.gov.uk\",\"subject\":\"Pipeline Completed\",\"body\":\"<html><body><h1>Success</h1><p>Pipeline executed successfully.</p>\n,\"dataFactoryName\":\"@{pipeline().DataFactory}\",\"pipelineName\":\"@{pipeline().Pipeline}\",\n</body></html>\",\"isBodyHtml\":true}",
+								"type": "Expression"
+							}
+						}
+					}
+				],
+				"policy": {
+					"elapsedTimeMetric": {}
+				},
+				"annotations": []
+			},
+			"dependsOn": []
+		},
+		{
 			"name": "[concat(parameters('factoryName'), '/AzureSqlDatabase1')]",
 			"type": "Microsoft.DataFactory/factories/linkedServices",
 			"apiVersion": "2018-06-01",
@@ -1035,8 +1071,7 @@
 						"frequency": "Day",
 						"interval": 1,
 						"startTime": "2024-11-22T01:00:00",
-						"timeZone": "GMT Standard Time",
-						"schedule": {}
+						"timeZone": "GMT Standard Time"
 					}
 				}
 			},
