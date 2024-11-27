@@ -1025,6 +1025,31 @@
 								}
 							]
 						}
+					},
+					{
+						"name": "Execute Pipeline1",
+						"type": "ExecutePipeline",
+						"dependsOn": [
+							{
+								"activity": "ForEach Day",
+								"dependencyConditions": [
+									"Skipped",
+									"Failed"
+								]
+							}
+						],
+						"policy": {
+							"secureInput": false
+						},
+						"userProperties": [],
+						"typeProperties": {
+							"pipeline": {
+								"referenceName": "SendEmail",
+								"type": "PipelineReference"
+							},
+							"waitOnCompletion": true,
+							"parameters": {}
+						}
 					}
 				],
 				"policy": {
@@ -1043,6 +1068,7 @@
 				"lastPublishTime": "2021-02-19T19:36:32Z"
 			},
 			"dependsOn": [
+				"[concat(variables('factoryId'), '/pipelines/SendEmail')]",
 				"[concat(variables('factoryId'), '/datasets/DS_REST_PowerBI1')]",
 				"[concat(variables('factoryId'), '/datasets/DS_ASQL_Generic')]"
 			]
