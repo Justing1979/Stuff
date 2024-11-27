@@ -1,0 +1,29 @@
+{
+	"name": "SendEmail",
+	"properties": {
+		"activities": [
+			{
+				"name": "SendEmail",
+				"type": "WebActivity",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"method": "POST",
+					"url": "https://ed409f9f-bf2d-44c8-a264-dc0fb7ce71b1.webhook.uks.azure-automation.net/webhooks?token=fve5cRjeqQ6wIcoN6fTmWYxdes7KzOs7HtJ0dTBKQ3g%3d",
+					"body": {
+						"value": "{\"toEmail\":\"justingreenwood@wakefield.gov.uk\",\"subject\":\"Pipeline Completed\",\"body\":\"<html><body><h1>Success</h1><p>Pipeline executed successfully.</p>\n,\"dataFactoryName\":\"@{pipeline().DataFactory}\",\"pipelineName\":\"@{pipeline().Pipeline}\",\n</body></html>\",\"isBodyHtml\":true}",
+						"type": "Expression"
+					}
+				}
+			}
+		],
+		"annotations": []
+	}
+}
